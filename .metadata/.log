@@ -486,3 +486,12 @@ org.eclipse.jface.resource.DeviceResourceException: Unable to create resource UR
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:610)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1519)
 	at org.eclipse.equinox.launcher.Main.main(Main.java:1492)
+
+!ENTRY org.eclipse.epp.logging.aeri.ide 2 10 2017-06-02 12:01:24.070
+!MESSAGE Updating the index from remote ‘https://www.eclipse.org/downloads/download.php?r=1&file=/technology/epp/logging/problems.zip’ failed with exception: org.apache.lucene.index.IndexFormatTooOldException: Format version is not supported (resource BufferedChecksumIndexInput(MMapIndexInput(path="/tmp/1496397683705-0/segments_2"))): -11 (needs to be between 1071082519 and 1071082519). This version of Lucene only supports indexes created with release 4.0 and later. ; version: 2.0.3.201610041015
+!STACK 0
+org.eclipse.epp.logging.aeri.core.util.Logs$LogTraceException
+	at org.eclipse.epp.logging.aeri.core.util.Logs$LogTraceException.newTrace(Logs.java:387)
+	at org.eclipse.epp.logging.aeri.core.util.Logs.log(Logs.java:134)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.ServerProblemsHistory$UpdateIndexJob.run(ServerProblemsHistory.java:322)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
