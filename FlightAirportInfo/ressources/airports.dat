@@ -630,7 +630,6 @@ Batsfjord///Norway///BJF///70.60050201416///29.691400527954
 Kristiansand///Norway///KRS///58.204200744628906///8.085370063781738
 Geilo///Norway///\N///60.417301177978516///8.518349647521973
 Bardufoss///Norway///BDU///69.055801391602///18.540399551392
- Evenes///Harstad/Narvik///Norway///ENEV///68.491302490234
 Fagernes///Norway///VDB///61.015598297119///9.2880601882935
 Floro///Norway///FRO///61.583599090576///5.0247201919556
 Oslo///Norway///OSL///60.193901062012///11.100399971008
@@ -647,12 +646,10 @@ Notodden///Norway///NTB///59.565701///9.21222
 Orland///Norway///OLA///63.69889831542969///9.604000091552734
 Roros///Norway///RRS///62.578399658203///11.342300415039
 Rygge///Norway///RYG///59.378817///10.785439
- Longyear///Svalbard///Norway///ENSB///78.246101379395
 Skien///Norway///SKE///59.185001373291016///9.566940307617188
 Stord///Norway///SRP///59.791900634765625///5.340849876403809
 Sandnessjoen///Norway///SSJ///65.956802368164///12.468899726868
 Tromso///Norway///TOS///69.68329620361328///18.918899536132812
- Torp///Sandefjord///Norway///ENTO///59.1866989136
 Trondheim///Norway///TRD///63.4578018///10.9239998
 Stavanger///Norway///SVG///58.876701354///5.6377801895
 Warsaw///Poland///\N///52.26850128173828///20.910999298095703
@@ -3055,7 +3052,6 @@ Poso///Indonesia///PSJ///-1.41674995422///120.657997131
 Morotai Island///Indonesia///OTI///2.0459899902300003///128.324996948
 Ternate///Indonesia///TTE///0.831413984298706///127.38099670410156
 Luwuk///Indonesia///LUW///-1.0389200448989868///122.77200317382812
- Ambon///Ambon///Indonesia///WAPP///-3.7102599144
 Fak Fak///Indonesia///FKQ///-2.9201900959014893///132.26699829101562
 Kaimana///Indonesia///KNG///-3.6445200443267822///133.6959991455078
 Babo///Indonesia///BXB///-2.5322399139404297///133.43899536132812
@@ -3133,7 +3129,6 @@ Hobart///Australia///HBA///-42.836101532///147.509994507
 Launceston///Australia///LST///-41.54529953///147.214004517
 Melbourne///Australia///MBW///-37.975799560546875///145.1020050048828
 Melbourne///Australia///MEL///-37.673301696777344///144.84300231933594
- Point Cook Base///Point Cook///Australia///YMPC///-37.93220138549805
 Adelaide///Australia///ADL///-34.94499969482422///138.531005859375
 Edinburgh///Australia///\N///-34.70249938964844///138.62100219726562
 Perth///Australia///JAD///-32.09749984741211///115.88099670410156
@@ -3625,7 +3620,6 @@ Shreveport///United States///BAD///32.5018005371///-93.6626968384
 Topeka///United States///FOE///38.950901031499995///-95.66359710690001
 Cotulla///United States///COT///28.45669937///-99.22029877
 Wilmington///United States///ILM///34.270599365234375///-77.90260314941406
- Ryan Field///Baton Rouge///United States///KBTR///30.53319931
 Tyler///United States///TYR///32.35409927368164///-95.40239715576172
 Baltimore///United States///BWI///39.17539978///-76.66829681
 Hobart///United States///HBR///34.991317///-99.051313
@@ -4049,12 +4043,10 @@ Liberal///United States///LBL///37.0442009///-100.9599991
 Lamar///United States///LAA///38.069698333699996///-102.68800354
 Goodland///United States///GLD///39.37060165///-101.6989975
 Cody///United States///COD///44.520198822///-109.024002075
- Hovden///Orsta-Volda///Norway///ENOV///62.180000305176
 ST MARY\\'S///United Kingdom///ISC///49.913299560546875///-6.291669845581055
 Springfield///United States///SGF///37.24570084///-93.38860321
 Narvik///Norway///NVK///68.436897277832///17.386699676514
 Berlevag///Norway///BVG///70.871398925781///29.034200668335
- Fornebu Airport///Oslo///Norway///ENFB///59.89580154418945
 Norilsk///Russia///NSK///69.31109619140625///87.33219909667969
 Anapa///Russia///AAQ///45.002101898193///37.347301483154
 Joplin///United States///JLN///37.151798248291016///-94.49829864501953
@@ -4241,7 +4233,6 @@ Büsum///Germany///HEI///54.153331756600004///8.90166664124
 Helgoland///Germany///HGL///54.185279846200004///7.91583299637
 Seinäjoki / Ilmajoki///Finland///SJY///62.692100524902344///22.832300186157227
 Nottingham///United Kingdom///NQT///52.91999816894531///-1.0791699886322021
-Doncaster/// Sheffield///United Kingdom///EGCN///53.4805378105
 Campbeltown///United Kingdom///CAL///55.437198638916016///-5.686389923095703
 Eday///United Kingdom///EOI///59.19060134887695///-2.7722198963165283
 Fair Isle///United Kingdom///FIE///59.53580093383789///-1.628059983253479
@@ -4260,14 +4251,11 @@ Leixlip///Ireland///\N///53.3521995544///-6.48611021042
 Sindal///Denmark///CNL///57.5035018921///10.229399681099999
 Leknes///Norway///LKN///68.152496337891///13.609399795532
 Namsos///Norway///OSY///64.472198486328///11.57859992981
- Røssvoll///Mo i Rana///Norway///ENRA///66.363899230957
- Ryum///Rørvik///Norway///ENRM///64.838302612305
 Røst///Norway///RET///67.527801513672///12.103300094604
 Sandane///Norway///SDN///61.830001831055///6.1058301925659
 Sogndal///Norway///SOG///61.156101///7.13778
 Svolvær///Norway///SVJ///68.243301391602///14.669199943542
 Sorkjosen///Norway///SOJ///69.786796569824///20.959400177002
- Svartnes///Vardø///Norway///ENSS///70.355400085449
 Værøy///Norway///VRY///67.654555///12.727257
 Bydgoszcz///Poland///BZG///53.096801757799994///17.9776992798
 Lodz///Poland///LCJ///51.721900939899996///19.3980998993
@@ -4340,8 +4328,6 @@ Dakhla///Western Sahara///VIL///23.7183///-15.932
 Essadouira///Morocco///ESU///31.3974990845///-9.6816701889
 El Aaiún///Western Sahara///EUN///27.151699///-13.2192
 El Aroui///Morocco///NDR///34.988800048799995///-3.0282099247
-Praia/// Santiago Island///Cape Verde///GVNP///14.924500465393066
-Sao Filipe/// Fogo Island///Cape Verde///GVSF///14.8850002289
 Baco///Ethiopia///BCO///5.78287///36.562
 Beica///Ethiopia///BEI///9.38638973236084///34.52190017700195
 Dessie///Ethiopia///DSE///11.082500457763672///39.71139907836914
@@ -4521,7 +4507,6 @@ Rotuma///Fiji///RTA///-12.482500076293945///177.0709991455078
 Savusavu///Fiji///SVU///-16.8027992249///179.341003418
 Eua Island///Tonga///EUA///-21.378299713100002///-174.957992554
 Lifuka///Tonga///HPA///-19.777000427246094///-174.34100341796875
-Angaha/// Niuafo'ou Island///Tonga///NFTO///-15.5707998276
 Niuatoputapu///Tonga///NTT///-15.977337651900001///-173.791029453
 Vanua Balavu///Fiji///VBV///-17.268999099731445///-178.9759979248047
 Alofi///Niue///IUE///-19.079030990600586///-169.92559814453125
@@ -5199,7 +5184,6 @@ Porto Heli///Greece///PKH///37.297501///23.1478
 Zell am See///Austria///\N///47.292222///12.7875
 Amberley///Australia///\N///-27.6406///152.712006
 Katherine///Australia///KTR///-14.521100044250488///132.3780059814453
- Laverton Base///Laverton///Australia///YLVT///-37.86360168457031
 Nowra///Australia///NOA///-34.94889831542969///150.53700256347656
 Lutsk///Ukraine///UKC///50.678404///25.487165
 Chernigov///Ukraine///CEJ///51.4021987915///31.1583003998
