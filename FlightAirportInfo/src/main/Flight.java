@@ -17,5 +17,10 @@ public class Flight
 		codeCompagnie = chCode;
 		modele = chModele;
 	}
-	 
+	public String toString()
+	{
+		return "Flight "+idVol+" "+airportDepart+" -> "+airportDestination
+				+" "+codeCompagnie+" "+modele;
+	}
+	
 }
