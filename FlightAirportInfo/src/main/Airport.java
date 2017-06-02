@@ -3,6 +3,7 @@ package main;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.ArrayList;
 
 public class Airport 
 {
@@ -11,6 +12,8 @@ public class Airport
 	private String idIATA;
 	private float latitude;
 	private float longitude;
+	private ArrayList<Flight> listDepart;
+	private ArrayList<Flight> listDestination;
 	
 	public Airport(String chVille, String chPays, String chId,
 			float chLatitude, float chLongitude)
@@ -20,6 +23,17 @@ public class Airport
 		idIATA = chId;
 		latitude = chLatitude;
 		longitude = chLongitude;
+		listDepart = new ArrayList<Flight>();
+		listDestination = new ArrayList<Flight>();
+		
+	}
+	public void ajoutVolDepart(Flight f)
+	{
+		listDepart.add(f);
+	}
+	public void ajoutVolDest(Flight f)
+	{
+		listDestination.add(f);
 	}
 	public static void lireFichier()
 	{
@@ -43,6 +57,22 @@ public class Airport
 			e.printStackTrace();
 		}
 		
+	}
+	public String getVille()
+	{
+		return ville;
+	}
+	public String getPays()
+	{
+		return pays;
+	}
+	public ArrayList<Flight> getListDepart()
+	{
+		return listDepart;
+	}
+	public ArrayList<Flight> getListDestination()
+	{
+		return listDestination;
 	}
 	
 	public static void main(String[] args){
