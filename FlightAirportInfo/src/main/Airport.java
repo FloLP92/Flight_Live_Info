@@ -21,11 +21,11 @@ public class Airport
 		latitude = chLatitude;
 		longitude = chLongitude;
 	}
-	public void lireFichier()
+	public static void lireFichier()
 	{
 		try
 		{
-			FileReader file = new FileReader("name_fichier.txt");
+			FileReader file = new FileReader("ressources/airports.dat");
 			BufferedReader bufRead = new BufferedReader(file);
 			
 			String line = bufRead.readLine();
@@ -35,6 +35,7 @@ public class Airport
 				int id = Integer.parseInt(array[0]);
 				float val = Float.parseFloat(array[0]);
 				line = bufRead.readLine();
+				System.out.println(line);
 			}
 			bufRead.close();
 			file.close();
@@ -42,5 +43,9 @@ public class Airport
 			e.printStackTrace();
 		}
 		
+	}
+	
+	public static void main(String[] args){
+		lireFichier();
 	}
 }
