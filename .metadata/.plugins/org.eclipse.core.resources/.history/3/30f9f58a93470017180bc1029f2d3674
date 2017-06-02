@@ -1,0 +1,18 @@
+package main;
+
+import java.util.ArrayList;
+
+public class Pays 
+{
+	private String nomPays;
+	private ArrayList<String> listVilles;
+	private ArrayList<Airport> listAirports;
+
+	
+	public Pays(String chNom)
+	{
+		nomPays = chNom;
+		listVilles = new ArrayList<String>();
+		listAirports = new ArrayList<Airport>();
+	}
+}

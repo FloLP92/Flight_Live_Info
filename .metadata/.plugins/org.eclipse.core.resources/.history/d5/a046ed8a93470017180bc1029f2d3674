@@ -8,14 +8,14 @@ import java.util.ArrayList;
 public class Airport 
 {
 	private String ville;
-	private Pays pays;
+	private String pays;
 	private String idIATA;
 	private float latitude;
 	private float longitude;
 	private ArrayList<Flight> listDepart;
 	private ArrayList<Flight> listDestination;
 	
-	public Airport(String chVille, Pays chPays, String chId,
+	public Airport(String chVille, String chPays, String chId,
 			float chLatitude, float chLongitude)
 	{
 		ville = chVille;
@@ -62,7 +62,7 @@ public class Airport
 	{
 		return ville;
 	}
-	public Pays getPays()
+	public String getPays()
 	{
 		return pays;
 	}

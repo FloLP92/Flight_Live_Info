@@ -1,0 +1,15 @@
+package main;
+
+public class RealTimeFlight 
+{
+	private int currentTime;
+	private String idVol;
+	private float latitude;
+	private float longitude;
+	private int vitesse;
+	private int direction;
+	private int lastUpdate;
+	private int vitesseVert;
+	private String codeICAO;
+	private boolean positionSol;
+}

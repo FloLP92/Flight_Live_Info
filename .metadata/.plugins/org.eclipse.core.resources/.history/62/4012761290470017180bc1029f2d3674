@@ -8,14 +8,14 @@ import java.util.ArrayList;
 public class Airport 
 {
 	private String ville;
-	private Pays pays;
+	private String pays;
 	private String idIATA;
 	private float latitude;
 	private float longitude;
 	private ArrayList<Flight> listDepart;
-	private ArrayList<Flight> listDestination;
+	private ArrayList<Flight> listDest;
 	
-	public Airport(String chVille, Pays chPays, String chId,
+	public Airport(String chVille, String chPays, String chId,
 			float chLatitude, float chLongitude)
 	{
 		ville = chVille;
@@ -24,7 +24,7 @@ public class Airport
 		latitude = chLatitude;
 		longitude = chLongitude;
 		listDepart = new ArrayList<Flight>();
-		listDestination = new ArrayList<Flight>();
+		listDest = new ArrayList<Flight>();
 		
 	}
 	public void ajoutVolDepart(Flight f)
@@ -33,7 +33,7 @@ public class Airport
 	}
 	public void ajoutVolDest(Flight f)
 	{
-		listDestination.add(f);
+		listDest.add(f);
 	}
 	public static void lireFichier()
 	{
@@ -58,21 +58,14 @@ public class Airport
 		}
 		
 	}
+	
 	public String getVille()
 	{
 		return ville;
 	}
-	public Pays getPays()
+	public String getPays()
 	{
 		return pays;
-	}
-	public ArrayList<Flight> getListDepart()
-	{
-		return listDepart;
-	}
-	public ArrayList<Flight> getListDestination()
-	{
-		return listDestination;
 	}
 	
 	public static void main(String[] args){

@@ -35,11 +35,11 @@ public class Flight
 	{
 		return airportDestination.getVille();
 	}
-	public Pays getPaysDepart()
+	public String getPaysDepart()
 	{
 		return airportDepart.getPays();
 	}
-	public Pays getPaysDestination()
+	public String getPaysDestination()
 	{
 		return airportDestination.getPays();
 	}
