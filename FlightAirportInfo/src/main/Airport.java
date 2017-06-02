@@ -9,14 +9,14 @@ import java.util.Iterator;
 public class Airport 
 {
 	private String ville;
-	private Pays pays;
+	private String pays;
 	private String idIATA;
 	private float latitude;
 	private float longitude;
 	private ArrayList<Flight> listDepart;
 	private ArrayList<Flight> listDestination;
 	
-	public Airport(String chVille, Pays chPays, String chId,
+	public Airport(String chVille, String chPays, String chId,
 			float chLatitude, float chLongitude)
 	{
 		ville = chVille;
@@ -44,57 +44,14 @@ public class Airport
 			BufferedReader bufRead = new BufferedReader(file);
 			
 			String line = bufRead.readLine();
+			ArrayList <Airport> arr =  new ArrayList();
 			while(line != null)
 			{
 				String[] array = line.split(",");
-				char[] res;
-				array[0].getChars(0,6,res,0);
-				System.out.println(res);
-				ArrayList <String> villeA = new ArrayList();
-				ArrayList <String> paysA = new ArrayList();
-				ArrayList <String> codeA = new ArrayList();
-				ArrayList <String> latitudeA = new ArrayList();
-				ArrayList <String> longitudeA = new ArrayList();
-				int i=0;
-				while(!(array[i].equals("/"))){
-					villeA.add(array[i]);
-					i++;
-				}
-				while(array[i].equals("/")){
-					i++;
-				}
-				while(!array[i].equals("/")){
-					paysA.add(array[i]);
-					i++;
-				}
-				while(array[i].equals("/")){
-					i++;
-				}
-				while(!array[i].equals("/")){
-					codeA.add(array[i]);
-					i++;
-				}
-				while(array[i].equals("/")){
-					i++;
-				}
-				while(!array[i].equals("/")){
-					latitudeA.add(array[i]);
-					i++;
-				}
-				while(array[i].equals("/")){
-					i++;
-				}
-				while(!array[i].equals("/")){
-					longitudeA.add(array[i]);
-					i++;
-				}
-				Iterator <String> it = villeA.iterator();
-				while(it.hasNext()){
-					System.out.println(it.next());
-				}
+				String[] parts = array[0].split("///");
+				System.out.println(parts[4]);
+				arr.add(new Airport(parts[0],parts[1],parts[2],Float.parseFloat(parts[3]),Float.parseFloat(parts[4])));
 				
-				//int id = Integer.parseInt(array[0]);
-				//float val = Float.parseFloat(array[0]);
 				line = bufRead.readLine();
 			}
 			bufRead.close();
@@ -108,7 +65,7 @@ public class Airport
 	{
 		return ville;
 	}
-	public Pays getPays()
+	public String getPays()
 	{
 		return pays;
 	}
