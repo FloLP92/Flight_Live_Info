@@ -36,32 +36,6 @@ public class Airport
 	{
 		listDestination.add(f);
 	}
-	public static void lireFichier()
-	{
-		try
-		{
-			FileReader file = new FileReader("ressources/airports.dat");
-			BufferedReader bufRead = new BufferedReader(file);
-			
-			String line = bufRead.readLine();
-			ArrayList <Airport> arr =  new ArrayList();
-			while(line != null)
-			{
-				String[] array = line.split(",");
-				String[] parts = array[0].split("///");
-				System.out.println(parts[4]);
-				arr.add(new Airport(parts[0],MainSystem.getListPays().get(parts[1]),
-						parts[2],Float.parseFloat(parts[3]),Float.parseFloat(parts[4])));
-				
-				line = bufRead.readLine();
-			}
-			bufRead.close();
-			file.close();
-		}catch(IOException e){
-			e.printStackTrace();
-		}
-		
-	}
 	public String getVille()
 	{
 		return ville;
@@ -80,6 +54,6 @@ public class Airport
 	}
 	
 	public static void main(String[] args){
-		lireFichier();
+		MainSystem.lireFichier();
 	}
 }
