@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-=======
-/.gitkeep
->>>>>>> branch 'master' of https://github.com/Vinnvi/Flight_Live_Info.git
+/airports.dat
+/flights.dat
+/realtime_flights.dat
 /main/

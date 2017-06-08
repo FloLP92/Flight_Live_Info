@@ -53,7 +53,4 @@ public class Airport
 		return listDestination;
 	}
 	
-	public static void main(String[] args){
-		MainSystem.lireFichier();
-	}
 }

@@ -52,4 +52,11 @@ public class MainSystem
 		}
 		
 	}
+	public static void main(String[] args) throws IOException{
+		//MainSystem.lireFichier();
+		RealTimeFlight r = new RealTimeFlight(50,"",50, 50, 50, 50, 50,50, "",true);
+		r.affichagePositionsAvions();
+	}
+	
+	
 }
