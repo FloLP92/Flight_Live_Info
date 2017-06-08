@@ -1,10 +1,14 @@
 package main;
 
+import java.awt.Frame;
 import java.util.Vector;
 
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JMenu;
+import javax.swing.JMenuBar;
 import javax.swing.JPanel;
+import javax.swing.SwingUtilities;
 
 import com.jme3.app.SimpleApplication;
 import com.jme3.asset.plugins.ZipLocator;
@@ -23,15 +27,13 @@ import com.jme3.system.AppSettings;
 
 import main.CubesTest;
 
-public class earthTest extends SimpleApplication {
+public class EarthTest extends SimpleApplication {
 
 	private static final float TEXTURE_LAT_OFFSET = -0.2f;
 	private static final float TEXTURE_LON_OFFSET = 2.8f;
 	Node earth_node;
 	Node LinesNode;
 	Node SpheresNode;
-	private static JFrame frame;
-	private static JPanel panel;
 
 	@Override
 	public void simpleInitApp() 
@@ -49,7 +51,13 @@ public class earthTest extends SimpleApplication {
 			displayTown(value.getLatitude(),value.getLongitude());  
 		}
 		
-		
+		final JMenuBar menubar = new JMenuBar();
+		final JMenu objectsMenu = new JMenu("File");
+		final JMenu helpMenu = new JMenu("Help");
+		menubar.add(objectsMenu);
+		menubar.add(helpMenu);
+		//Frame frame = (JFrame) SwingUtilities.getAncestorOfClass(JFrame.class, this);
+		//frame.setJMenuBar(menubar);
 		
 		
 		
