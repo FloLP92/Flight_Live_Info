@@ -31,7 +31,7 @@ public class Flight
 	{
 		return airportDepart.getVille();
 	}
-	public String getVilleDestination()
+	public String getVilleDest()
 	{
 		return airportDestination.getVille();
 	}
@@ -39,7 +39,7 @@ public class Flight
 	{
 		return airportDepart.getPays();
 	}
-	public Pays getPaysDestination()
+	public Pays getPaysDest()
 	{
 		return airportDestination.getPays();
 	}

@@ -17,6 +17,13 @@ public class MainSystem
 		listAirports = new HashMap<String,Airport>();
 		listFlights = new HashMap<String,Flight>();
 		listPays = new HashMap<String,Pays>();
+		
+		MainSystem.lireFichier("ressources/airports.dat");
+		MainSystem.lireFichier("ressources/flights.dat");
+		System.out.println(listAirports.size());
+		System.out.println(listFlights.size());
+		//RealTimeFlight r = new RealTimeFlight(50,"",50, 50, 50, 50, 50,50, "",true);
+		//r.affichagePositionsAvions();
 	}
 	public static HashMap<String,Pays> getListPays()
 	{
@@ -29,6 +36,42 @@ public class MainSystem
 	public static HashMap<String,Flight> getListFlight()
 	{
 		return listFlights;
+	}
+	public String getVilleDepart(String id)
+	{
+		if(listFlights.containsKey(id))
+		{
+			return listFlights.get(id).getVilleDepart();
+		}
+		else
+			return null;
+	}
+	public String getVilleDest(String id)
+	{
+		if(listFlights.containsKey(id))
+		{
+			return listFlights.get(id).getVilleDest();
+		}
+		else
+			return null;
+	}
+	public Pays getPaysDepart(String id)
+	{
+		if(listFlights.containsKey(id))
+		{
+			return listFlights.get(id).getPaysDepart();
+		}
+		else
+			return null;
+	}
+	public Pays getPaysDest(String id)
+	{
+		if(listFlights.containsKey(id))
+		{
+			return listFlights.get(id).getPaysDest();
+		}
+		else
+			return null;
 	}
 	public static void lireFichier(String nameFile)
 	{
@@ -43,12 +86,12 @@ public class MainSystem
 				{
 					String[] array = line.split(",");
 					String[] parts = array[0].split("///");
-					Airport a = new Airport(parts[0],MainSystem.getListPays().get(parts[1]),
-							parts[2],Float.parseFloat(parts[3]),Float.parseFloat(parts[4]));
 					if(!listPays.containsKey(parts[1]))
 					{
 						listPays.put(parts[1],new Pays(parts[1]));
 					}
+					Airport a = new Airport(parts[0],MainSystem.getListPays().get(parts[1]),
+							parts[2],Float.parseFloat(parts[3]),Float.parseFloat(parts[4]));
 					listPays.get(parts[1]).ajouterAirport(a);
 					listAirports.put(parts[2],a);
 					
@@ -80,12 +123,7 @@ public class MainSystem
 	}
 	public static void main(String[] args) throws IOException
 	{
-		MainSystem.lireFichier("ressources/airports.dat");
-		MainSystem.lireFichier("ressources/flights.dat");
-		System.out.println(listAirports.size());
-		System.out.println(listFlights.size());
-		RealTimeFlight r = new RealTimeFlight(50,"",50, 50, 50, 50, 50,50, "",true);
-		r.affichagePositionsAvions();
+		new MainSystem();
 	}
 	
 	
