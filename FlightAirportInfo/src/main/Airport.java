@@ -28,6 +28,14 @@ public class Airport
 		listDestination = new ArrayList<Flight>();
 		
 	}
+	public float getLatitude()
+	{
+		return latitude;
+	}
+	public float getLongitude()
+	{
+		return longitude;
+	}
 	public void ajoutVolDepart(Flight f)
 	{
 		listDepart.add(f);
@@ -52,4 +60,5 @@ public class Airport
 	{
 		return listDestination;
 	}
+
 }

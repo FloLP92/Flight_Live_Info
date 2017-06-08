@@ -6,6 +6,8 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 
+import com.jme3.system.AppSettings;
+
 public class MainSystem 
 {
 	private static HashMap<String,Airport> listAirports;
@@ -24,6 +26,19 @@ public class MainSystem
 		System.out.println(listFlights.size());
 		//RealTimeFlight r = new RealTimeFlight(50,"",50, 50, 50, 50, 50,50, "",true);
 		//r.affichagePositionsAvions();
+		
+		AppSettings settings = new AppSettings(true);
+		settings.setResolution(1200, 800);
+		settings.setSamples(8);
+		settings.setFrameRate(60);
+		settings.setVSync(true);
+		
+		earthTest app = new earthTest();
+		app.setSettings(settings);
+		app.setShowSettings(false);
+		app.setDisplayStatView(false);
+		app.setDisplayFps(false);
+		app.start();
 	}
 	public static HashMap<String,Pays> getListPays()
 	{
