@@ -9,14 +9,14 @@ import java.util.Iterator;
 public class Airport 
 {
 	private String ville;
-	private String pays;
+	private Pays pays;
 	private String idIATA;
 	private float latitude;
 	private float longitude;
 	private ArrayList<Flight> listDepart;
 	private ArrayList<Flight> listDestination;
 	
-	public Airport(String chVille, String chPays, String chId,
+	public Airport(String chVille, Pays chPays, String chId,
 			float chLatitude, float chLongitude)
 	{
 		ville = chVille;
@@ -50,7 +50,8 @@ public class Airport
 				String[] array = line.split(",");
 				String[] parts = array[0].split("///");
 				System.out.println(parts[4]);
-				arr.add(new Airport(parts[0],parts[1],parts[2],Float.parseFloat(parts[3]),Float.parseFloat(parts[4])));
+				arr.add(new Airport(parts[0],MainSystem.getListPays().get(parts[1]),
+						parts[2],Float.parseFloat(parts[3]),Float.parseFloat(parts[4])));
 				
 				line = bufRead.readLine();
 			}
@@ -65,7 +66,7 @@ public class Airport
 	{
 		return ville;
 	}
-	public String getPays()
+	public Pays getPays()
 	{
 		return pays;
 	}
