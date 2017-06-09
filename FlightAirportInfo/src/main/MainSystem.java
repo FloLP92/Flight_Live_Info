@@ -251,7 +251,9 @@ public class MainSystem
 	}
 	public static void main(String[] args) throws IOException
 	{
-		new MainSystem();
+		//new MainSystem();
+		RealTimeFlight r = null;
+		r.affichagePositionsAvions();
 	}
 	
 	

@@ -4,32 +4,39 @@ import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.sql.Timestamp;
+import java.util.ArrayList;
+import java.util.Date;
 
 public class RealTimeFlight 
 {
-	private int currentTime;
+	private Date currentTime;
 	private String idVol;
 	private float latitude;
 	private float longitude;
-	private int vitesse;
-	private int direction;
-	private int lastUpdate;
-	private int vitesseVert;
+	private float altitude;
+	private float vitesse;
+	private float direction;
+	private Date lastUpdatePosition;
+	private Date lastUpdateVitesse;
+	private float vitesseVert;
 	private String codeICAO;
 	private boolean positionSol;
 	private static BufferedReader bufRead;
 	
-	public RealTimeFlight(int chCurrent, String chId, float chLat,
-			float chLong, int chVitesse, int chDir, int chLast,
-			int chVitesseVert, String chCode, boolean chPos)
+	public RealTimeFlight(Date chCurrent, String chId,float chAltitude, float chLat,
+			float chLong, float chVitesse, float chDir, Date chLastPosition,Date chLastVitesse,
+			float chVitesseVert, String chCode, boolean chPos)
 	{
 		currentTime = chCurrent;
 		idVol = chId;
 		latitude = chLat;
 		longitude = chLong;
+		altitude = chAltitude;
 		vitesse = chVitesse;
 		direction = chDir;
-		lastUpdate = chLast;
+		lastUpdatePosition = chLastPosition;
+		lastUpdateVitesse = chLastVitesse;
 		vitesseVert = chVitesseVert;
 		codeICAO = chCode;
 		positionSol = chPos;
@@ -44,11 +51,86 @@ public class RealTimeFlight
 			bufRead = new BufferedReader(file);
 			String line = bufRead.readLine();
 			int compteur =1;
+			ArrayList <RealTimeFlight> r = new ArrayList<>();
 			while(line != null){ //Tant qu'on a des lignes a lire dans le fichier
 				String[] array = line.split(",");
 				String[] parts = array[0].split("///");
 				System.out.println("Avion "+compteur+" :\n");
+				
+				//time part
+				Timestamp t1 = new Timestamp(Long.parseLong(parts[0])*1);
+				Date time = new Date(t1.getTime());
+				System.out.println(time+"\n");
+				System.out.println("Identifiant de vol : "+parts[1]+"\n");
+				System.out.println("Latitude : "+parts[2]+"\n");
+				if(parts[2].equals("null")){
+					parts[2] = "0";
+				}
+				System.out.println("Longitude : "+parts[3]+"\n");
+				if(parts[3].equals("null")){
+					parts[3] = "0";
+				}
+				System.out.println("Altitude (en metres) : "+parts[4]+"\n");
+				if(parts[4].equals("null")){
+					parts[4] = "0";
+				}
+				System.out.println("Vitesse : "+parts[5]+"\n");
+				System.out.println("Direction en degrés (0° = Nord) : "+parts[6]+"\n");
+				
+				long b;
+				
+				if(parts[7] !=null){
+					try{
+					Float f  = Float.parseFloat(parts[7]);
+					b = f.longValue();
+					}catch(Exception ec){
+						b=0;
+					}
+				}
+				else{
+					b = 0;
+				}
+				Timestamp t = new Timestamp(b*1000);
+				Date date = new Date(t.getTime());
+				System.out.println("Date de la dernière MaJ de la position : "+date+"\n");
+				
+				if(parts[8] !=null){
+					try{
+					Float f  = Float.parseFloat(parts[8]);
+					b = f.longValue();
+					}catch(Exception ec){
+						b=0;
+					}
+				}
+				else{
+					b = 0;
+				}
+				t = new Timestamp(b*1000);
+				Date date2 = new Date(t.getTime());
+				
+				System.out.println("Date de la dernière MaJ de la vitesse : "+date2+"\n");
+
+				System.out.println("Vitesse verticale (en m/s) : "+parts[9]+"\n");
+				System.out.println("Code ICAO du pays : "+parts[10]+"\n");
+				System.out.println("Au sol : "+parts[11]+"\n");
+				Boolean bool;
+				if(parts[11].equals("false")){
+					bool = false;
+				}
+				else{
+					bool = true;
+				}
 				line = bufRead.readLine();
+				compteur++;
+				if(!parts[9].equals("null")){
+					r.add(new RealTimeFlight(time,parts[1],Float.parseFloat(parts[2]),Float.parseFloat(parts[3]),Float.parseFloat(parts[4]),Float.parseFloat(parts[5]),Float.parseFloat(parts[6]),date,date2,Float.parseFloat(parts[9]),parts[10],bool));
+				
+				}
+				else{
+					Float f = new Float(0.0);
+					r.add(new RealTimeFlight(time,parts[1],Float.parseFloat(parts[2]),Float.parseFloat(parts[3]),Float.parseFloat(parts[4]),Float.parseFloat(parts[5]),Float.parseFloat(parts[6]),date,date2,f,parts[10],bool));
+
+				}
 			}
 			
 		} catch (FileNotFoundException e) {
